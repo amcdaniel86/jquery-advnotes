@@ -83,6 +83,44 @@ $( document ).ready(function() {
 // //fadeToggle
 // $("#element").fadeToggle();
 
+// EVENT OBJECTS
+// $("li").click(function(e){
+//   console.log(e.currentTarget.innerHTML);
+// });
+// $("li").click(function(e){
+//   console.log(this.innerHTML);
+// });
+// both methods push the same result.
+//REMEMBER IMPORTANT - e.currentTarget or this. return DOM elements, not jQuery objects.
+
+$("button").click(function(){
+  console.log("you clicked a button!");
+})
+
+$("li:nth-child(1)").click(function(e){
+  $("li:nth-child(1)").hide([5000]);
+});
+$("li:nth-child(2)").click(function(e){
+  $("li:nth-child(2)").hide([5000]);
+});
+$("li:nth-child(3)").click(function(e){
+  $("li:nth-child(3)").hide([5000]);
+});
+$("li:nth-child(4)").click(function(e){
+  $("li:nth-child(4)").hide([5000]);
+});
+
+$(".li-button").click(function(e){
+  $("li:nth-child(2)").hide([5000]);
+});
+
+//how to make a fill in box with jquery show up in browser.
+$("input").keyup(function(e){
+  let inputValue = $("input").val()
+  console.log(inputValue)
+  let sayHi = "hello " + inputValue;
+  $("h1").html(sayHi)
+})
 
 
 
